@@ -1,0 +1,235 @@
+body{
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f3;
+   
+}
+
+header{
+    background: #0A3D62;
+    padding: 20px 0;
+}
+
+
+.header{
+    width: 95%;
+    margin-left: auto;
+    color: white;
+}
+
+.main {
+    min-width: 940px;
+    margin: 100px auto;
+    /* padding: 50px 0; */
+    background-color: #f2f2f3;
+    display: flex;
+    height: auto;
+    /* align-items: center; */
+    flex-direction: row;
+    justify-content: center;
+}
+
+table{
+    margin: 20px 0 40px;
+    border: 1px solid #b1becb;
+    width: 100%;
+}
+
+thead{
+    background: #11588C;
+    color: white;
+    font-weight: bold;
+}
+
+th, td{
+    /* border : 1px solid #000000; */
+    border-left: 1px solid #b1becb;
+    /*border-radius: 5px;*/
+    padding: 8px 15px;
+    font-size: 16px;
+
+}
+
+td:nth-child(1){
+    border-left: 0;
+} 
+
+tr:nth-child(2n){
+    background: #e9e9ed; 
+} 
+
+tbody tr:hover {
+    background: rgb(223, 218, 237);
+}
+
+button {
+    padding: 7px 10px;
+    background: #0A3D62;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+    border : none;
+}
+
+button:hover {
+    background-color: rgb(69, 126, 167,1);
+    color: white;
+}
+
+
+
+footer{
+    background-color: #0A3D62;
+    padding: 50px 0;
+    position: sticky;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    position: fixed;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+    font-size: 16px;
+}
+
+.input {
+    margin: 0;
+    border: 1px solid rgb(219, 219, 219,1);
+    width: 25%;
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+form label, form legend{
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+
+
+
+.form {
+    margin: 40px 40px;
+    background-color: white;
+    padding: 30px 40px;
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.divLinha{
+    display: flex;
+    flex-direction: row;
+}
+
+.divIdentificador{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.divRemedio{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    width: 200px; 
+}
+.divDataInicio{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+ .inputQuantidade{
+    width: 60px;
+    border: 0px;
+    border-bottom: 1px solid #b1becb;
+    padding: 0px 7px 0px 7px;
+    font-size: 16px;
+}
+
+ 
+.divQuantidadeVezes{
+    margin-right: 10px;
+    width: 300px;
+    margin-top: 25px;
+    display: flex;
+} 
+
+.divQuantidadeDias{
+    width: 265px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: right;
+} 
+
+.inputDescricao{
+    width: 490px;
+    border: 0px;
+    border-bottom: 1px solid #b1becb;
+    padding: 0px 7px 0px 7px;
+    font-size: 16px;
+}
+
+.inputDescricao:focus{
+    border: 0px;
+    border-bottom: 1px solid #b1becb;
+}
+
+
+.divDescricao{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin-top: 30px;
+}
+
+.inputDialog {
+    margin: 0;
+    border: 1px solid rgb(219, 219, 219,1);
+    padding: 7px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+
+dialog{
+    min-width: 600px;
+
+    padding: 0px;
+    border: 1px solid #b1becb;
+    border-radius: 5px;
+    background-color: #f2f2f3;
+}
+
+dialog .titulo{
+    text-align: left;
+    background-color: #0A3D62;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+.dialogBotoes{
+    margin-right: 20px ;
+    margin-right: 40px ;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: right;
+}
+
+.imgLink{
+    padding-left: 3px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Projeto</title>
+</head>
+
+<body onload="iniciar()">
+     <!-- Cabeçalho de informações do sistema -->
+    <header >
+        <div class="header">
+            <h1>Controle da Medicação</h1>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="conteudo">
+            <section>
+                <select id="escolhaPesquisa" name="escolhaPesquisa" onchange="trocaType()" class="input">
+                    <option value="TD">Todos</option>
+                    <option value="ID">Id</option>
+                    <option value="DESC">Descrição</option>
+                </select>
+                <input type="text" id="pesquisa" placeholder="" disabled class="input">
+                <button  onclick="pesquisar()" class="button">Pesquisar</button>
+                <button onclick="abrirTelaNovoMedicamento()" class="button" >Adicionar</button>
+            </section>
+        
+
+            <!-- Tabela com items existentes -->
+            <section>
+                <table id="myTable" >
+                    <thead>
+                        <tr>
+                            <th width="10px">Código</th>
+                            <th width="300px">Remédio</th>
+                            <th width="300px">Descrição</th>
+                            <th width="10px">Quantidade vezes ao dia</th>
+                            <th width="10px">Quantidade de dias</th>
+                            <th width="170px">Data inicio</th>
+                            <th width="300px">Observação</th>
+                            <th width="10px">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myBody">
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+
+    <dialog id="novoMedicamentoDialog">
+        <div class="titulo">
+            <h3 id="tituloDialog">Nova Medicação</h3>
+        </div>    
+        <form id="formRemedio">
+            <section class="form">
+                <div class="divLinha">
+                    <div class="divIdentificador">
+                        <label>Código</label>
+                        <input type="text" id="id" name="id" disabled size =4 class="inputDialog"/>
+                    </div>
+                    <div class="divRemedio" >
+                        <label for="remedio_id">Remédio <span style="color: red;">*</span></label>
+                        <select  id="remedio_id" name="remedio_id"  required class="inputDialog" >
+                            <option value="">Selecione:</option>
+                        </select>
+                    </div>
+                    <div class="divDataInicio">
+                        <label for="data_inicio_medicacao">Data inicio<span style="color: red;">*</span></label>
+                        <input type="datetime-local" id="data_inicio_medicacao" name="data_inicio_medicacao"  class="inputDialog" placeholder="Data inicio da Medicação:" required/>
+                    </div>
+                </div>
+                <div class="divDescricao">
+                    <label for="descricao">Descrição <span style="color: red;">*</span></label>
+                    <input type="text" id="descricao" name="descricao"   class="inputDescricao" required/>
+                </div>
+                <div class="divLinha">
+                    <div class="divQuantidadeVezes">
+                        <label for="quantidade_vezes_dia" >Quantidade de vezes ao dia<span style="color: red;">*</span></label>
+                        <input type="number" id="quantidade_vezes_dia" min="0" name="quantidade_vezes_dia" class="inputQuantidade" required/>
+                    </div>
+                    <div class="divQuantidadeDias">
+                        <label for="quantidade_dia" >Quantidade de dias</label>
+                        <input type="number" id="quantidade_dia" name="quantidade_dia" min="0"  class="inputQuantidade" />
+                    </div>
+                </div>
+                <div class="divDescricao">
+                    <label for="descricao">Observação </label>
+                    <input type="text" id="observacao" name="observacao"   class="inputDescricao" required/>
+                </div>
+            </section>
+            <section class="dialogBotoes">
+                <button id="btAlterar" onclick="salvarAlteracao()" type="button"  >Salvar</button>
+                <button id="btIncluir" onclick="salvarNovoMedicamento()" type="button"  >Salvar</button>
+                <button onclick="fecharJanela()" style="margin-left: 15px;" >Fechar</button>
+            </section>
+        </form>
+    </dialog>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
+
+
