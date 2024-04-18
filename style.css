@@ -22,11 +22,9 @@ header{
 .main {
     min-width: 940px;
     margin: 100px auto;
-    /* padding: 50px 0; */
     background-color: #f2f2f3;
     display: flex;
     height: auto;
-    /* align-items: center; */
     flex-direction: row;
     justify-content: center;
 }
@@ -44,9 +42,7 @@ thead{
 }
 
 th, td{
-    /* border : 1px solid #000000; */
     border-left: 1px solid #b1becb;
-    /*border-radius: 5px;*/
     padding: 8px 15px;
     font-size: 16px;
 
