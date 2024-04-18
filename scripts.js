@@ -183,6 +183,7 @@ const deleteMedicamento = (id, elemento) => {
     .then((obj) => {
         if(obj.status == 200){
           elemento.remove();
+          alert(obj.data.mesage);
         }else 
           if(obj.status == 404){
             alert(obj.data.mesage);
@@ -329,7 +330,9 @@ const insertButtonRemover = (span, id) => {
 const excluir = (e) => {
   let id = e.target.value;
   let elemento = e.target.parentNode.parentNode.parentNode;
-  deleteMedicamento(id, elemento);
+  if (confirm("Confirma a exclusão?")) {
+    deleteMedicamento(id, elemento);
+  }
 }
 
 /*
