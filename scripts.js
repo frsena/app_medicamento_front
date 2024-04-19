@@ -386,7 +386,7 @@ const trocaType = () => {
   document.querySelector('#pesquisa').disabled = "";
   if(escolha == "ID"){
     document.querySelector('#pesquisa').type = "number";
-    document.querySelector('#pesquisa').placeholder = "Id";
+    document.querySelector('#pesquisa').placeholder = "Código";
     document.querySelector('#pesquisa').min="1"
     
   } else 
