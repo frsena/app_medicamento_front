@@ -119,7 +119,7 @@ const enviarNovoMedicamento = async (medicamento) => {
           insertList(data.id,data.remedio.nome,
             data.descricao, data.quantidade_vezes_dia, data.observacao,
             data.quantidade_dia, data.data_inicio_medicacao)
-
+            fecharJanela();
           alert("Medicamento adicionado!");
         }else
           if(obj.status == 400){
